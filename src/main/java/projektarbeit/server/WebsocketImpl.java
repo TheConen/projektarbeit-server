@@ -73,6 +73,7 @@ public class WebsocketImpl {
         } else if (request instanceof IntentRequest) {
             message += ";Intent";
             Intent intent = ((IntentRequest) request).getIntent();
+            message += ";" + intent.getName();
             Map<String, Slot> slots = intent.getSlots();
 
             for (Map.Entry<String, Slot> itr: slots.entrySet()) {
