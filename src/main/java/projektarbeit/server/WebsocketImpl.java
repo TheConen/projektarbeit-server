@@ -22,9 +22,7 @@ public class WebsocketImpl {
         this.skill = skill;
 
         ScheduledExecutorService clearMessages = Executors.newSingleThreadScheduledExecutor();
-        clearMessages.scheduleAtFixedRate(() -> {
-            answers.clear();
-        }, 1, 30, TimeUnit.SECONDS);
+        clearMessages.scheduleAtFixedRate(() -> answers.clear(), 1, 30, TimeUnit.SECONDS);
     }
 
     public void start(Session session) {
@@ -67,13 +65,13 @@ public class WebsocketImpl {
     }
 
     public boolean send(SpeechletRequest request) {
-        String message = skill;
+        String message = skill + ";" + request.getRequestId();
         if (request instanceof SessionStartedRequest) {
-            message += ";SessionStarted;" + request.getRequestId();
+            message += ";SessionStarted";
         } else if (request instanceof LaunchRequest) {
-            message += ";Launch;" + request.getRequestId();
+            message += ";Launch";
         } else if (request instanceof IntentRequest) {
-            message += ";Intent;" + request.getRequestId();
+            message += ";Intent";
             Intent intent = ((IntentRequest) request).getIntent();
             Map<String, Slot> slots = intent.getSlots();
 
@@ -82,7 +80,7 @@ public class WebsocketImpl {
                 message += ";" + curSlot.getName() + "," + curSlot.getValue();
             }
         } else if (request instanceof SessionEndedRequest) {
-            message += ";SessionEnded;" + request.getRequestId();
+            message += ";SessionEnded";
         } else {
             return false;
         }
