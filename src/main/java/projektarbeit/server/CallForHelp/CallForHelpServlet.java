@@ -7,6 +7,6 @@ import projektarbeit.server.simonsays.SimonSaysSpeechlet;
 public class CallForHelpServlet extends SpeechletServlet {
     
 	public CallForHelpServlet() {
-        this.setSpeechlet(new SimonSaysSpeechlet());
+        this.setSpeechlet(new CallForHelpSpeechlet());
     }
 }
