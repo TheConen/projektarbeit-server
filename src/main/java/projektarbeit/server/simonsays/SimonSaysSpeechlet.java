@@ -31,7 +31,7 @@ public class SimonSaysSpeechlet implements Speechlet {
     private SpeechletResponse getAnswer(String requestId) {
         String answer = SimonSaysWebsocket.getAnswer(requestId);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 25; i++) {
             if (answer == null) {
                 try {
                     Thread.sleep(50);
