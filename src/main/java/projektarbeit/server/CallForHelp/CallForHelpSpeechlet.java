@@ -1,4 +1,4 @@
-package projektarbeit.server.CallForHelp;
+package projektarbeit.server.callforhelp;
 
 import com.amazon.speech.speechlet.*;
 import com.amazon.speech.ui.PlainTextOutputSpeech;

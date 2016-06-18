@@ -26,7 +26,7 @@ public class WebsocketImpl {
     }
 
     public void start(Session session) {
-        log(skill + ":Open");
+        log("Open");
         sessions.add(session);
     }
 

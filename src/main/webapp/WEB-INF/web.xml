@@ -16,11 +16,19 @@
 
     <servlet>
         <servlet-name>CallForHelpServlet</servlet-name>
-        <servlet-class>projektarbeit.server.CallForHelp.CallForHelpServlet</servlet-class>
+        <servlet-class>projektarbeit.server.callforhelp.CallForHelpServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CallForHelpServlet</servlet-name>
         <url-pattern>/callforhelp</url-pattern>
     </servlet-mapping>
-  
+
+    <servlet>
+        <servlet-name>BigBrotherServlet</servlet-name>
+        <servlet-class>projektarbeit.server.bigbrother.BigBrotherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BigBrotherServlet</servlet-name>
+        <url-pattern>/bigbrother</url-pattern>
+    </servlet-mapping>
 </web-app>
