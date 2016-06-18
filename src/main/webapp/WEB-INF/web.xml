@@ -9,10 +9,18 @@
         <servlet-name>SimonSaysServlet</servlet-name>
         <servlet-class>projektarbeit.server.simonsays.SimonSaysServlet</servlet-class>
     </servlet>
-    
     <servlet-mapping>
         <servlet-name>SimonSaysServlet</servlet-name>
         <url-pattern>/simonsays</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CallForHelpServlet</servlet-name>
+        <servlet-class>projektarbeit.server.CallForHelp.CallForHelpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CallForHelpServlet</servlet-name>
+        <url-pattern>/callforhelp</url-pattern>
     </servlet-mapping>
   
 </web-app>
