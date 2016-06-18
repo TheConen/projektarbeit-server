@@ -7,7 +7,7 @@ import javax.websocket.server.ServerEndpoint;
 
 @ServerEndpoint("/callforhelpws")
 public class CallForHelpWebsocket {
-    private static WebsocketImpl websocket = new WebsocketImpl("callforhelp");
+    private static WebsocketImpl websocket = new WebsocketImpl("CallForHelp");
 
     @OnOpen
     public void start(Session session) {
