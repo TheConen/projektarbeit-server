@@ -1,4 +1,4 @@
-package projektarbeit.server.CallForHelp;
+package projektarbeit.server.callforhelp;
 
 import com.amazon.speech.speechlet.SpeechletRequest;
 import projektarbeit.server.WebsocketImpl;
